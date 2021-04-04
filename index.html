@@ -3,17 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    /> -->
     <link rel="stylesheet" href="./style.css" type="text/css" />
     <script src="script.js" defer></script>
-    <title>My Project</title>
+    <title>Insect Catch Game</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div class="title-screen screen">
+      <h1>Catch the Insect</h1>
+      <button>Play Game</button>
+    </div>
+    <div class="select-screen screen">
+      <h2>What is your "favorite" insect?</h2>
+      <ul>
+        <li>
+          <button>
+            <h3>Fly</h3>
+            <img src="./images/fly.png" alt="Fly image">            
+          </button>
+        </li>
+        <li>
+          <button>
+            <h3>Mosquito</h3>
+            <img src="./images/mosquito.png" alt="Mosquito image">            
+          </button>
+        </li>
+        <li>
+          <button>
+            <h3>Spider</h3>
+            <img src="./images/spider.png" alt="Spider image">            
+          </button>
+        </li>
+        <li>
+          <button>
+            <h3>Cockroach</h3>
+            <img src="./images/cockroach.png" alt="Cockroach image">            
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="game-screen screen">
+      <header>
+        <ul>
+          <li>
+            <p>Time: <span>00:00</span></p>
+          </li>
+          <li>
+            <p>Score: <span>0</span></p>
+          </li>
+        </ul>
+      </header>
+      <div class="play-area"></div>
+      <div class="message">
+        <p>Are you annoyed yet?</p>
+        <p>You are playing an impossible game!!</p>
+      </div>
+    </div>
   </body>
 </html>
