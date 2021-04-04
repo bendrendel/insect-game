@@ -1,16 +1,155 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+/* Universal */
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: #3c65d6;
+  --secondary-color: #fff;
+  --tertiary-color: #ddd;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-family: "Press Start 2P", sans-serif;
   margin: 0;
+  overflow: hidden;
+  transform: translateY(-200vh);
+  transition: transform 2s linear;
+}
+
+.screen {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Title Screen */
+.title-screen button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--main-color);
+  font-family: inherit;
+  padding: 15px 20px;
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.title-screen button:hover {
+  background-color: var(--tertiary-color);
+}
+
+.title-screen button:focus {
+  background-color: var(--tertiary-color);
+}
+
+.title-screen button:active {
+  background-color: var(--secondary-color);
+}
+
+/* Select Screen */
+.select-screen ul {
+  list-style-type: none;
+}
+
+.select-screen li {
+  display: inline;
+}
+
+.select-screen button {
+  background-color: var(--main-color);
+  color: inherit;
+  font-family: inherit;
+  height: 140px;
+  width: 140px;
+  border: 1px solid #fff;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.select-screen button:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.select-screen button:focus {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+.select-screen button:active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.select-screen p {
+  font-size: 0.8rem;
+}
+
+.select-screen img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Game Screen */
+.game-screen header {
+  width: 100%;
+  height: 70px;
+}
+
+.game-screen ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.game-screen .play-area {
+  height: calc(100% - 70px);
+  width: 100%;
+  padding: 50px;
+  display: relative;
+}
+
+.game-screen img {
+  height: 90px;
+  width: 90px;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.game-screen .message {
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 15px 0;
+  top: 200px;
+  left: 0;
+  transform: translateY(-300px);
+  transition: transform 1s linear;
+}
+
+.game-screen .message.show {
+  transform: translateY(0);
 }
