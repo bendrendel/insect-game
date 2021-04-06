@@ -17,22 +17,26 @@ body {
   font-family: "Press Start 2P", sans-serif;
   margin: 0;
   overflow: hidden;
-  transform: translateY(-200vh);
-  transition: transform 2s linear;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 .screen {
-  height: 100vh;
+  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   overflow: hidden;
+  transform: translateY(0vh);
+  transition: transform 1s linear;
 }
 
 /* Title Screen */
-.title-screen button {
+#play-btn {
   background-color: var(--secondary-color);
   border: none;
   color: var(--main-color);
@@ -43,28 +47,32 @@ body {
   outline: none;
 }
 
-.title-screen button:hover {
+#play-btn:hover {
   background-color: var(--tertiary-color);
 }
 
-.title-screen button:focus {
+#play-btn:focus {
   background-color: var(--tertiary-color);
 }
 
-.title-screen button:active {
+#play-btn:active {
   background-color: var(--secondary-color);
 }
 
 /* Select Screen */
 .select-screen ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .select-screen li {
-  display: inline;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
-.select-screen button {
+.insect-btn {
   background-color: var(--main-color);
   color: inherit;
   font-family: inherit;
@@ -76,26 +84,26 @@ body {
   outline: none;
 }
 
-.select-screen button:hover {
+.insect-btn:hover {
   background-color: #fff;
   color: var(--main-color);
 }
 
-.select-screen button:focus {
+.insect-btn:focus {
   background-color: #fff;
   color: var(--main-color);
 }
 
-.select-screen button:active {
+.insect-btn:active {
   background-color: var(--main-color);
   color: #fff;
 }
 
-.select-screen p {
+.insect-btn p {
   font-size: 0.8rem;
 }
 
-.select-screen img {
+.insect-btn img {
   width: 90px;
   height: 90px;
   object-fit: contain;

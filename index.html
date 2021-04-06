@@ -10,32 +10,32 @@
   <body>
     <div class="title-screen screen">
       <h1>Catch the Insect</h1>
-      <button>Play Game</button>
+      <button id="play-btn">Play Game</button>
     </div>
     <div class="select-screen screen">
       <h2>What is your "favorite" insect?</h2>
       <ul>
         <li>
-          <button>
-            <h3>Fly</h3>
+          <button class="insect-btn">
+            <p>Fly</p>
             <img src="./images/fly.png" alt="Fly image">            
           </button>
         </li>
         <li>
-          <button>
-            <h3>Mosquito</h3>
+          <button class="insect-btn">
+            <p>Mosquito</p>
             <img src="./images/mosquito.png" alt="Mosquito image">            
           </button>
         </li>
         <li>
-          <button>
-            <h3>Spider</h3>
+          <button class="insect-btn">
+            <p>Spider</p>
             <img src="./images/spider.png" alt="Spider image">            
           </button>
         </li>
         <li>
-          <button>
-            <h3>Cockroach</h3>
+          <button class="insect-btn">
+            <p>Cockroach</p>
             <img src="./images/cockroach.png" alt="Cockroach image">            
           </button>
         </li>
@@ -52,8 +52,10 @@
           </li>
         </ul>
       </header>
-      <div class="play-area"></div>
-      <div class="message">
+      <div class="play-area">
+        <img src="./images/fly.png" alt="Fly image">
+      </div>
+      <div class="message show">
         <p>Are you annoyed yet?</p>
         <p>You are playing an impossible game!!</p>
       </div>
