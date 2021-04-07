@@ -12,31 +12,64 @@
 }
 
 body {
-  background-color: var(--main-color);
+  background-color: var(--main-color);  
   color: var(--secondary-color);
   font-family: "Press Start 2P", sans-serif;
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   overflow: hidden;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
 }
 
 .screen {
   height: 100%;
+  width: 100%;
+  position: absolute;
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  transform: translateY(0vh);
-  transition: transform 1s linear;
+  transform: translateY(100%);
+}
+
+.screen.show {
+  animation: fly-in 1s linear both;
+}
+
+.screen.hide {
+  animation: fly-out 1s linear both;
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 /* Title Screen */
-#play-btn {
+.title-screen {
+  transform: translateY(0%);
+}
+
+.play-btn {
   background-color: var(--secondary-color);
   border: none;
   color: var(--main-color);
@@ -47,15 +80,15 @@ body {
   outline: none;
 }
 
-#play-btn:hover {
+.play-btn:hover {
   background-color: var(--tertiary-color);
 }
 
-#play-btn:focus {
+.play-btn:focus {
   background-color: var(--tertiary-color);
 }
 
-#play-btn:active {
+.play-btn:active {
   background-color: var(--secondary-color);
 }
 
