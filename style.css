@@ -15,7 +15,6 @@ body {
   background-color: var(--main-color);  
   color: var(--secondary-color);
   font-family: "Press Start 2P", sans-serif;
-  width: 100%;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -71,20 +70,16 @@ body {
 
 .play-btn {
   background-color: var(--secondary-color);
-  border: none;
   color: var(--main-color);
   font-family: inherit;
   padding: 15px 20px;
   margin: 10px;
   cursor: pointer;
+  border: none;  
   outline: none;
 }
 
 .play-btn:hover {
-  background-color: var(--tertiary-color);
-}
-
-.play-btn:focus {
   background-color: var(--tertiary-color);
 }
 
@@ -95,41 +90,39 @@ body {
 /* Select Screen */
 .select-screen ul {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
 }
 
 .select-screen li {
-  display: inline-block;
-  margin: 0;
+  margin: 10px;
   padding: 0;
 }
 
 .insect-btn {
   background-color: var(--main-color);
-  color: inherit;
+  color: var(--secondary-color);
   font-family: inherit;
   height: 140px;
   width: 140px;
-  border: 1px solid #fff;
-  margin: 5px;
+  padding: 0;
+  border: 1px solid var(--secondary-color);
   cursor: pointer;
   outline: none;
 }
 
 .insect-btn:hover {
-  background-color: #fff;
-  color: var(--main-color);
-}
-
-.insect-btn:focus {
-  background-color: #fff;
+  background-color: var(--secondary-color);
   color: var(--main-color);
 }
 
 .insect-btn:active {
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .insect-btn p {
